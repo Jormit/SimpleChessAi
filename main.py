@@ -51,6 +51,7 @@ def best_move(board):
 	# Randomly select from the list of best moves.
 	board.push(random.choice(best_moves))
 
+# Find min in tree.
 def min(board,depth):
 	worst = 999
 	
@@ -73,6 +74,7 @@ def min(board,depth):
 
 	return worst
 
+# Find max in tree.
 def max(board,depth):
 	max = -999
 	
@@ -95,7 +97,7 @@ def max(board,depth):
 
 	return max
 
-# Add up all the pieces on each side to get the value of whites advantage.
+# Add up all the pieces on each side to get the value of blacks advantage.
 def get_board_value(board):
 	count = 0;
 	pm = board.piece_map()
@@ -123,10 +125,9 @@ while (board.is_game_over() == False):
 				exit(1)
 			print("Invalid Move!")	
 
-	print(board)
-	print("---------------")	
+	print("------You------")
+	print(board)		
 	best_move(board)
+	print("-------Ai------")
 	print(board)
-	print("---------------")
-	print(get_board_value(board))
 	
