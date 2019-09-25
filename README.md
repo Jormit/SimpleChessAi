@@ -5,7 +5,3 @@ Very simple chess ai written in python built on top of the py-chess library. The
 - Add valuation of positions.
 - Add support for probing the endgame database.
 - Alpha beta pruning.
-
-# Screenshot.
-![](img/1.png) 
-
